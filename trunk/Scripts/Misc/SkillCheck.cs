@@ -7,7 +7,7 @@ namespace Server.Misc
 {
 	public class SkillCheck
 	{
-		private static readonly bool AntiMacroCode = !Core.ML;		//Change this to false to disable anti-macro code
+		private static readonly bool AntiMacroCode = true;	//UOD Edit
 
 		public static TimeSpan AntiMacroExpire = TimeSpan.FromMinutes( 5.0 ); //How long do we remember targets/locations?
 		public const int Allowance = 3;	//How many times may we use the same location/target for gain
@@ -125,10 +125,10 @@ namespace Server.Misc
 			bool success = ( chance >= Utility.RandomDouble() );
 			double gc = (double)(from.Skills.Cap - from.Skills.Total) / from.Skills.Cap;
 			gc += ( skill.Cap - skill.Base ) / skill.Cap;
-			gc /= 2;
+			gc /= 10;  //UOD Edit  - Original gc /= 2;
 
 			gc += ( 1.0 - chance ) * ( success ? 0.5 : (Core.AOS ? 0.0 : 0.2) );
-			gc /= 2;
+			gc /= 10;  //UOD Edit  - Original gc /= 2;
 
 			gc *= skill.Info.GainFactor;
 
@@ -274,9 +274,9 @@ namespace Server.Misc
 
 			switch ( stat )
 			{
-				case Stat.Str: return ( from.StrLock == StatLockType.Up && from.RawStr < 125 );
-				case Stat.Dex: return ( from.DexLock == StatLockType.Up && from.RawDex < 125 );
-				case Stat.Int: return ( from.IntLock == StatLockType.Up && from.RawInt < 125 );
+				case Stat.Str: return ( from.StrLock == StatLockType.Up && from.RawStr < 100 );  //UOD Edit - Original < 125
+				case Stat.Dex: return ( from.DexLock == StatLockType.Up && from.RawDex < 100 );
+				case Stat.Int: return ( from.IntLock == StatLockType.Up && from.RawInt < 100 );
 			}
 
 			return false;
@@ -336,7 +336,7 @@ namespace Server.Misc
 			}
 		}
 
-		private static TimeSpan m_StatGainDelay = TimeSpan.FromMinutes( 15.0 );
+		private static TimeSpan m_StatGainDelay = TimeSpan.FromMinutes( 30.0 );  //UOD Edit - Original 15.0
 		private static TimeSpan m_PetStatGainDelay = TimeSpan.FromMinutes( 5.0 );
 
 		public static void GainStat( Mobile from, Stat stat )
