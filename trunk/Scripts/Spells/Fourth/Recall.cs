@@ -89,6 +89,10 @@ namespace Server.Spells.Fourth
 			{
 				Caster.SendLocalizedMessage( 1005569 ); // You can not recall to another facet.
 			}
+			else if ( Caster.Karma <= 5000 )
+			{
+				Caster.SendMessage( "You cannot cast this spell at your karma level." ); // You are not allowed to travel there.
+			}
 			else if ( !SpellHelper.CheckTravel( Caster, TravelCheckType.RecallFrom ) )
 			{
 			}

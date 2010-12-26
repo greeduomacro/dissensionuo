@@ -1027,6 +1027,13 @@ namespace Server.Mobiles
 		{
 			if ( Paragon.CheckConvert( this, location, m ) )
 				IsParagon = true;
+				
+				//start felucca like monsters - Zagros
+			else if ( m == Map.Felucca )
+				VirtualArmor *= 2;
+				HitsMaxSeed = RawStr * 2;  //UOD Edit - Monsters in Felucca are twice as hard.
+				Hits = HitsMaxSeed;
+
 
 			base.OnBeforeSpawn( location, m );
 		}
