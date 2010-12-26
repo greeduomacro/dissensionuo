@@ -398,13 +398,13 @@ namespace Server
 		#region Pre-AOS definitions
 		public static readonly LootPack OldPoor = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,			100.00, "1d25" ),
+				new LootPackEntry(  true, Gold,			100.00, "1d5" ),
 				new LootPackEntry( false, Instruments,	  0.02, 1 )
 			} );
 
 		public static readonly LootPack OldMeager = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,			100.00, "5d10+25" ),
+				new LootPackEntry(  true, Gold,			100.00, "1d10+5" ),
 				new LootPackEntry( false, Instruments,	  0.10, 1 ),
 				new LootPackEntry( false, OldMagicItems,  1.00, 1, 1, 0, 60 ),
 				new LootPackEntry( false, OldMagicItems,  0.20, 1, 1, 10, 70 )
@@ -412,7 +412,7 @@ namespace Server
 
 		public static readonly LootPack OldAverage = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,			100.00, "10d10+50" ),
+				new LootPackEntry(  true, Gold,			100.00, "2d10+10" ),
 				new LootPackEntry( false, Instruments,	  0.40, 1 ),
 				new LootPackEntry( false, OldMagicItems,  5.00, 1, 1, 20, 80 ),
 				new LootPackEntry( false, OldMagicItems,  2.00, 1, 1, 30, 90 ),
@@ -421,7 +421,7 @@ namespace Server
 
 		public static readonly LootPack OldRich = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,			100.00, "10d10+250" ),
+				new LootPackEntry(  true, Gold,			100.00, "3d10+40" ),
 				new LootPackEntry( false, Instruments,	  1.00, 1 ),
 				new LootPackEntry( false, OldMagicItems, 20.00, 1, 1, 60, 100 ),
 				new LootPackEntry( false, OldMagicItems, 10.00, 1, 1, 65, 100 ),
@@ -430,7 +430,7 @@ namespace Server
 
 		public static readonly LootPack OldFilthyRich = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,			100.00, "2d125+400" ),
+				new LootPackEntry(  true, Gold,			100.00, "1d125+60" ),
 				new LootPackEntry( false, Instruments,	  2.00, 1 ),
 				new LootPackEntry( false, OldMagicItems, 33.00, 1, 1, 50, 100 ),
 				new LootPackEntry( false, OldMagicItems, 33.00, 1, 1, 60, 100 ),
@@ -440,7 +440,7 @@ namespace Server
 
 		public static readonly LootPack OldUltraRich = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,			100.00, "5d100+500" ),
+				new LootPackEntry(  true, Gold,			100.00, "2d100+100" ),
 				new LootPackEntry( false, Instruments,	  2.00, 1 ),
 				new LootPackEntry( false, OldMagicItems,	100.00, 1, 1, 40, 100 ),
 				new LootPackEntry( false, OldMagicItems,	100.00, 1, 1, 40, 100 ),
@@ -452,7 +452,7 @@ namespace Server
 
 		public static readonly LootPack OldSuperBoss = new LootPack( new LootPackEntry[]
 			{
-				new LootPackEntry(  true, Gold,			100.00, "5d100+500" ),
+				new LootPackEntry(  true, Gold,			100.00, "3d100+300" ),
 				new LootPackEntry( false, Instruments,	  2.00, 1 ),
 				new LootPackEntry( false, OldMagicItems,	100.00, 1, 1, 40, 100 ),
 				new LootPackEntry( false, OldMagicItems,	100.00, 1, 1, 40, 100 ),
