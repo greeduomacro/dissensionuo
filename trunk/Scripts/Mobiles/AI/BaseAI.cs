@@ -27,7 +27,11 @@ namespace Server.Mobiles
 		AI_Mage,
 		AI_Berserk,
 		AI_Predator,
-		AI_Thief
+// >>>>>>>>>> ERICA'S ORC Scout and Ninja // PAPPA SMURF's Spellbinder
+		AI_Thief,
+		AI_OrcScout,
+		AI_Ninja,
+		AI_Spellbinder
 	}
 
 	public enum ActionType
