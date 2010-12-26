@@ -19,7 +19,7 @@ namespace Server.Misc
 
 			Mobile m = args.Mobile;
 
-			m.SendMessage( "Welcome, {0}! There {1} currently {2} user{3} online, with {4} item{5} and {6} mobile{7} in the world.",
+			m.SendMessage( "Welcome back, {0}. There {1} currently {2} player{3} in the world of Dissension.",
 				args.Mobile.Name,
 				userCount == 1 ? "is" : "are",
 				userCount, userCount == 1 ? "" : "s",

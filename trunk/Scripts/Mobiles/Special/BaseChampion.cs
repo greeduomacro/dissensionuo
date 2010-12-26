@@ -93,7 +93,7 @@ namespace Server.Mobiles
 
 		public void GivePowerScrolls()
 		{
-			if ( Map != Map.Felucca )
+			if ( Map != Map.Malas )
 				return;
 
 			List<Mobile> toGive = new List<Mobile>();
@@ -290,7 +290,7 @@ namespace Server.Mobiles
 				if ( !canFit )
 					return;
 
-				Gold g = new Gold( 500, 1000 );
+				Gold g = new Gold( 50, 100 );
 				
 				g.MoveToWorld( new Point3D( m_X, m_Y, z ), m_Map );
 
