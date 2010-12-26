@@ -1027,13 +1027,6 @@ namespace Server.Mobiles
 		{
 			if ( Paragon.CheckConvert( this, location, m ) )
 				IsParagon = true;
-				
-				//start felucca like monsters - Zagros
-			else if ( m == Map.Felucca )
-				VirtualArmor *= 2;
-				HitsMaxSeed = RawStr * 2;  //UOD Edit - Monsters in Felucca are twice as hard.
-				Hits = HitsMaxSeed;
-
 
 			base.OnBeforeSpawn( location, m );
 		}
@@ -2196,6 +2189,16 @@ namespace Server.Mobiles
 					break;
 				case AIType.AI_Thief:
 					m_AI = new ThiefAI(this);
+					break;
+// >>>>>>>>>> ERICA'S ORC SCOUT and NINJA // PAPPA SMURF's Spellbinder (1st change of 1) >>>>>>>>>>
+				case AIType.AI_OrcScout:
+					m_AI = new OrcScoutAI(this);			         
+				        break;
+				case AIType.AI_Ninja:
+					m_AI = new NinjaAI(this);
+					break;
+				case AIType.AI_Spellbinder:
+					m_AI = new SpellbinderAI(this);
 					break;
 			}
 		}
