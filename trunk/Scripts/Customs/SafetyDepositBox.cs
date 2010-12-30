@@ -27,7 +27,7 @@ namespace Server.Items
 		[Constructable] 
 		public SafetyDepositBox() : base( 0xE41 ) 
 		{ 
-			Name = "An Unclaimed Safety Deposit Box [50,000 Gold]";
+			Name = "An Unclaimed Safety Deposit Box [20,000 Gold]";
 			Hue = 00;
 			Movable = false;
 
@@ -44,11 +44,11 @@ namespace Server.Items
 			if ( m_Owner == null )
 			{
 				Item[] Token = from.Backpack.FindItemsByType( typeof( Gold ) );  //Search their backpack for item type, in this case - gold.
-					if ( from.Backpack.ConsumeTotal( typeof( Gold ), 50000 ) )  //Try to take 5,000 gold from their backpack.  If it does, it assigns the box to them.
+					if ( from.Backpack.ConsumeTotal( typeof( Gold ), 20000 ) )  //Try to take 5,000 gold from their backpack.  If it does, it assigns the box to them.
 						{
 							m_Owner = from;
 							this.Name = m_Owner.Name.ToString() + "'s Safety Deposit Box";
-							from.SendMessage( "This safety deposit box has been assigned to you. 50,000 gold has been taken from your backpack." );
+							from.SendMessage( "This safety deposit box has been assigned to you. 20,000 gold has been taken from your backpack." );
 						}
 						else
 							{
