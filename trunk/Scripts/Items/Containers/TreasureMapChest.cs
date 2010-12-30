@@ -108,7 +108,7 @@ namespace Server.Items
 			{
 				cont.LockLevel = 0; // Can't be unlocked
 
-				cont.DropItem( new Gold( Utility.RandomMinMax( 50, 100 ) ) );
+				cont.DropItem( new Gold( Utility.RandomMinMax( 30, 60 ) ) );
 
 				if ( Utility.RandomDouble() < 0.75 )
 					cont.DropItem( new TreasureMap( 0, Map.Trammel ) );
@@ -132,7 +132,7 @@ namespace Server.Items
 				cont.LockLevel = cont.RequiredSkill - 10;
 				cont.MaxLockLevel = cont.RequiredSkill + 40;
 
-				cont.DropItem( new Gold( level * 1000 ) );
+				cont.DropItem( new Gold( level * 100 ) );  //UOD Edit
 
 				for ( int i = 0; i < level * 5; ++i )
 					cont.DropItem( Loot.RandomScroll( 0, 63, SpellbookType.Regular ) );
@@ -223,7 +223,7 @@ namespace Server.Items
 			if ( level == 0 )
 				reagents = 12;
 			else
-				reagents = level * 3;
+				reagents = level * 2;  //UOD Edit
 
 			for ( int i = 0; i < reagents; i++ )
 			{
@@ -236,7 +236,7 @@ namespace Server.Items
 			if ( level == 0 )
 				gems = 2;
 			else
-				gems = level * 3;
+				gems = level * 1;  //UOD Edit
 
 			for ( int i = 0; i < gems; i++ )
 			{

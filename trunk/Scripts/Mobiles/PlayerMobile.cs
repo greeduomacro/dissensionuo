@@ -2050,13 +2050,6 @@ namespace Server.Mobiles
 
 			base.Resurrect();
 
-			if ( this.Alive && !wasAlive )
-			{
-				Item deathRobe = new DeathRobe();
-				
-				if ( !EquipItem( deathRobe ) )
-					deathRobe.Delete();
-			}
 		}
 
 		public override double RacialSkillBonus

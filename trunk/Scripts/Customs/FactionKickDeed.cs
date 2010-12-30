@@ -1,7 +1,7 @@
 //Remove From Factions Deed
 //By Tresdni aka DxMonkey of Ultima Eclipse
 //This deed will remove you from factions.
-//This was not written by Fenris or rtaylor...no matter what he says or thinks.
+
 
 using System;
 using Server.Network;
